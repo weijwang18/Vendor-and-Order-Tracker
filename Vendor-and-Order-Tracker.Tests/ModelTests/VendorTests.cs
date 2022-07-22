@@ -61,7 +61,7 @@ namespace VendorAndOrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetAll_ReturnsItems_VendorList()
+    public void GetAll_ReturnsVendors_VendorList()
     {
       string name1 = "Cafe1";
       string name2 = "Cafe2";
