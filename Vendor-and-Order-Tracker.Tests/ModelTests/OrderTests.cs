@@ -35,5 +35,17 @@ namespace VendorAndOrderTracker.Tests
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
+
+    [TestMethod]
+    public void GetId_ReturnsOrderId_Int()
+    {
+      string title = "Tom's order";
+      string description = "three croissants";
+      int price = 10;
+      DateTime date = new DateTime (2022, 7, 22, 7,00,0);
+      Order newOrder = new Order(title, description, price, date);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }
