@@ -23,5 +23,17 @@ namespace VendorAndOrderTracker.Tests
       Order newOrder = new Order(title, description, price, date);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+
+    [TestMethod]
+    public void GetTitle_ReturnsTitle_String()
+    {
+      string title = "Tom's order";
+      string description = "three croissants";
+      int price = 10;
+      DateTime date = new DateTime (2022, 7, 22, 7,00,0);
+      Order newOrder = new Order(title, description, price, date);
+      string result = newOrder.Title;
+      Assert.AreEqual(title, result);
+    }
   }
 }
