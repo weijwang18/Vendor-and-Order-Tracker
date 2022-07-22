@@ -53,12 +53,26 @@ namespace VendorAndOrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetAll_ReturnsEmptyList_ItemList()
+    public void GetAll_ReturnsEmptyList_VendorList()
     {
       List<Vendor> newList = new List<Vendor> { };
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsItems_VendorList()
+    {
+      string name1 = "Cafe1";
+      string name2 = "Cafe2";
+      string description1 = "Cafe1 good";
+      string description2 = "Cafe2 better";
+      Vendor newVendor1 = new Vendor(name1, description1);
+      Vendor newVendor2 = new Vendor(name2, description2);
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
   }
+}
 }
 
