@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace VendorAndOrderTracker
+namespace VendorAndOrderTracker.Models
 {
   public class Order
   {
@@ -9,7 +9,7 @@ namespace VendorAndOrderTracker
     public string Description { get; set; }
     public string Title { get; set; }
     public int Price { get; set; }
-    public DateTime Date { get;}
+    public DateTime Date { get; set;}
     public int Id { get; }
 
     public Order(string title, string description, int price, DateTime date)

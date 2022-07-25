@@ -8,13 +8,14 @@
   <body>
     <h1>Order Details: </h1>
 
-    <h1>vendor: @Model["vendor"].Name</h1>
-    <h2>@Model["order"].Title</h2>
-    <h2>@Model["order"].Description</h2>
-    <h2>@Model["order"].Price</h2>
-    <h2>@Model["order"].Date.Month/@Model["order"].Date.Day/@Model["order"].Date.Year</h2>
+    <h1>Vendor: @Model["vendor"].Name</h1>
+    <h2>Order: @Model["order"].Title</h2>
+    <h2>Description: @Model["order"].Description</h2>
+    <h2>Price: $ @Model["order"].Price</h2>
+    <h2>Date: @Model["order"].Date.Month/@Model["order"].Date.Day/@Model["order"].Date.Year</h2>
 
-    <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
-    <a href='/vendors'>View all vendors</a>
+    <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></p>
+    <p><a href='/vendors/@Model["vendor"].Id'>Back to @Model["vendor"].Name's order list</a></p>
+    <p><a href='/vendors'>View all vendors</a></p>
   </body>
 </html>
