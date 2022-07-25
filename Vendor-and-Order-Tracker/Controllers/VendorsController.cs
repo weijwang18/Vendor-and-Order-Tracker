@@ -34,11 +34,15 @@ namespace VendorAndOrderTracker.Controllers
       return View();
     }
 
-    [HttpGet("/vendors/{id}")]
-    public ActionResult Show(int id)
-    {
-      Vendor foundVendor = Vendor.Find(id);
-      return View(foundVendor);
-    }
+     [HttpGet("/vendors/{id}")]
+  public ActionResult Show(int id)
+  {
+    Dictionary<string, object> model = new Dictionary<string, object>();
+    Vendor selectedVendor = Vendor.Find(id);
+    List<Order> orders = selectedVendor.Orders;
+    model.Add("vendor", selectedVendor);
+    model.Add("orders", orders);
+    return View(model);
+  }
   }
 }
