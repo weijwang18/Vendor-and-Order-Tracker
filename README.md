@@ -10,6 +10,7 @@
 * Markdown
 * MS Test
 * NET 5.0
+* Razor
 
 ## Description
 
